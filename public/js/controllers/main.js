@@ -49,6 +49,29 @@ angular.module('ngDay2App')
       ProductSvc.edit($scope.product);
       $location.path('/product');
     };
+  })
+  .controller("PanelController", function() {
+  this.tab = 0;
 
+  this.selectTab = function(setTab) {
+    this.tab = setTab;
+  };
+  this.isSelected = function(checkTab) {
+    return this.tab === checkTab;
+  };
+  })
+
+  .controller("ReviewController", function() {
+    this.review = {};
+
+    this.addReview = function(product) {
+      product.reviews.push(this.review);
+      this.review = {};
+    };
   });
+
+
+
+
+
 

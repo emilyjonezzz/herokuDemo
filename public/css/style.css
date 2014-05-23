@@ -3,8 +3,18 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.productSection {
+	margin-top: 100px;
+	border-bottom: 1px solid #ddd;
+}
+
+.createBtn {
+	margin-left: 100px;
+	margin-bottom: 50px;
+}
+
 .adminBtn a {
-  color: #fff;
+  	color: #fff;
 }
 
 .adminBtn a:hover {
@@ -27,4 +37,12 @@ body {
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: white;
     background-color: #5e5e5e;
+}
+
+.nav, .pagination, .carousel, .panel-title a { 
+	cursor: pointer; 
+}
+
+.nav-tabs {
+ border-bottom: none; 
 }

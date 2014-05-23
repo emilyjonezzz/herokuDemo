@@ -48,3 +48,5 @@ angular
         redirectTo: '/'
       });
   });
+
+angular.module('myModule', ['ui.bootstrap']);
