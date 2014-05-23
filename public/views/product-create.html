@@ -8,3 +8,10 @@
 </div>
 
   <h1>Products</h1>
+
+<input type="text" data-ng-model="product.title" placeholder="Title">
+<br>
+<input type="url" data-ng-model="product.url" placeholder="url">
+<br>
+<textarea data-ng-model="product.description" placeholder="Product Description"></textarea>
+<button data-ng-click="newProduct(product)">Create</button>

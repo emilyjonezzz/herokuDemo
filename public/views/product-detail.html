@@ -7,4 +7,11 @@
   <h1 class="text-muted">Crossfit Depot</h1>
 </div>
 
-  <h1>Products</h1>
+<h1>Products</h1>
+
+<section>
+	<h1>{{product.title}}</h1>
+	<img ng-src="{{product.pic}}"></img>
+	<p>{{product.description}}</p>
+	<a href="#/product/{{product._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
+</section>

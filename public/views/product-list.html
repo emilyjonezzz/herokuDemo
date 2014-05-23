@@ -7,4 +7,12 @@
   <h1 class="text-muted">Crossfit Depot</h1>
 </div>
 
-  <h1>Products</h1>
+<h1>Products</h1>
+
+<button class="btn btn-sm btn-success" data-ng-click="createProduct()">Create New Product</button>
+<section data-ng-repeat="product in products">
+	<h2>{{product.title}}</h2>
+	<img ng-src="{{product.pic}}"></img>
+	<p>{{product.description}}</p>
+	<a href="#/product/{{product._id}}">view more</a>
+</section>
