@@ -21,7 +21,7 @@ angular.module('ngDay2App')
 			)
 	})
  	.factory('ProductsSvc', function($resource) {
-		return $resource('api/collections/shoppingcart',
+		return $resource('api/collections/products',
 			{},
 			{
 				query: { method: 'GET', isArray: true },
@@ -29,7 +29,7 @@ angular.module('ngDay2App')
 			});
 	})
 	.factory('ProductSvc', function($resource) {
-		return $resource('api/collections/shoppingcart/:id',
+		return $resource('api/collections/products/:id',
 			{
 				id: '@_id'
 			},
