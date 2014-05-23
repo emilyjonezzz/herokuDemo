@@ -51,3 +51,4 @@ angular.module('ngDay2App')
     };
 
   });
+

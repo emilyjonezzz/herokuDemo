@@ -11,7 +11,9 @@
 
 <section>
 	<h3>{{product.title}}</h3>
-	<img ng-src="{{product.thumbnail}}"></img>
+	<img ng-src="{{product.pic1}}"></img>
+	<img ng-src="{{product.pic2}}"></img>
+	<img ng-src="{{product.pic3}}"></img>
 	<p>{{product.description}}</p>
 	<p>{{product.price | currency}}</p>
 	<a href="#/product/{{product._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
