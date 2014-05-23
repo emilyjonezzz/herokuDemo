@@ -12,6 +12,22 @@ angular
       .when('/', {
         templateUrl: 'views/main.html'
       })
+      .when('/product', {
+        templateUrl: 'views/product-list.html',
+        controller: ''
+      })
+      .when('/new', {
+        templateUrl: 'views/product-create.html',
+        controller: ''
+      })
+      .when('/product/:id', {
+        templateUrl: 'views/product-detail.html',
+        controller: ''
+      })
+      .when('/product/:id/edit', {
+        templateUrl: 'views/product-editDetail.html',
+        controller: ''
+      })
       .when('/blog', {
         templateUrl: 'views/blog-list.html',
         controller: 'PostsCtrl'
