@@ -24,10 +24,7 @@ angular.module('ngDay2App')
   		$location.path('/blog');
   	};
 
-  });
-
-angular.module('ngDay2App')
-  .controller('ProductsCtrl', function ($scope, $location, ProductsSvc) {
+    .controller('ProductsCtrl', function ($scope, $location, ProductsSvc) {
 
     $scope.createProduct = function() {
       $location.path('/newproduct');
@@ -51,3 +48,29 @@ angular.module('ngDay2App')
     };
 
   });
+
+// angular.module('ngDay2App')
+//   .controller('ProductsCtrl', function ($scope, $location, ProductsSvc) {
+
+//     $scope.createProduct = function() {
+//       $location.path('/newproduct');
+//     };
+//     $scope.newProduct = function(product) {
+//       ProductsSvc.create(post)
+//       $location.path('/product');
+//     };
+//     $scope.products = ProductsSvc.query();
+//   })
+//   .controller('ProductCtrl', function($scope, $location, $routeParams, ProductSvc) {
+
+//     $scope.product = ProductSvc.show({ id: $routeParams.id });
+//     $scope.delete = function() { 
+//       ProductSvc.delete({ id: $routeParams.id });
+//       $location.path('/product');
+//     };
+//     $scope.edit = function() {
+//       ProductSvc.edit($scope.product);
+//       $location.path('/product');
+//     };
+
+//   });
