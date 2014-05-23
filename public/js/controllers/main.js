@@ -33,7 +33,7 @@ angular.module('ngDay2App')
       $location.path('/newproduct');
     };
     $scope.newProduct = function(product) {
-      ProductsSvc.create(post)
+      ProductsSvc.create(product)
       $location.path('/product');
     };
     $scope.products = ProductsSvc.query();
