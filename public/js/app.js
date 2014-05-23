@@ -14,19 +14,19 @@ angular
       })
       .when('/product', {
         templateUrl: 'views/product-list.html',
-        controller: ''
+        controller: 'ProductsCtrl'
       })
       .when('/newproduct', {
         templateUrl: 'views/product-create.html',
-        controller: ''
+        controller: 'ProductsCtrl'
       })
       .when('/product/:id', {
         templateUrl: 'views/product-detail.html',
-        controller: ''
+        controller: 'ProductCtrl'
       })
       .when('/product/:id/edit', {
         templateUrl: 'views/product-editDetail.html',
-        controller: ''
+        controller: 'ProductCtrl'
       })
       .when('/blog', {
         templateUrl: 'views/blog-list.html',
