@@ -3,6 +3,16 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.background {
+    padding-top: 0;
+    padding-bottom: 20px;
+    // background: #ddd;
+    background: url(/images/barbell.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .productSection {
 	margin-top: 100px;
 	border-bottom: 1px solid #ddd;
