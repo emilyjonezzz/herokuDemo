@@ -12,7 +12,8 @@
 <button class="btn btn-sm btn-success" data-ng-click="createProduct()">Create New Product</button>
 <section data-ng-repeat="product in products">
 	<h3>{{product.title}}</h3>
-	<img ng-src="{{product.image}}"></img>
+	<img ng-src="{{product.thumbnail}}"></img>
 	<p>{{product.description}}</p>
+	<p>{{product.price}}</p>
 	<a href="#/product/{{product._id}}">view more</a>
 </section>
