@@ -30,7 +30,7 @@ angular.module('ngDay2App')
   .controller('ProductsCtrl', function ($scope, $location, ProductsSvc) {
 
     $scope.createProduct = function() {
-      $location.path('/new');
+      $location.path('/newproduct');
     };
     $scope.newProduct = function(product) {
       ProductsSvc.create(post)
