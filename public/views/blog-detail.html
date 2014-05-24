@@ -13,7 +13,10 @@
 
 <section>
 	<h1>{{post.title}}</h1>
+	<img ng-src="{{post.pic}}">
 	<p>{{post.content}}</p>
+	<em>{{post.author}}</em>
+	<br>
 	<a href="#/blog/{{post._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
 </section>
 

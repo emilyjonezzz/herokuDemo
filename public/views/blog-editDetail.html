@@ -13,7 +13,11 @@
 
 <input type="text" data-ng-model="post.title" value="{{post.title}}">
 <br>
-<textarea data-ng-model="post.content">{{post.content}}</textarea>
+<input type="text" data-ng-model="post.pic" value="{{post.pic}}">
+<br>
+<textarea data-ng-model="post.content" cols="50" rows="10">{{post.content}}</textarea>
+<br>
+<input type="text" data-ng-model="post.author" value="{{post.author}}">
 <button data-ng-click="edit()">Update Post</button>
 
 </div>
