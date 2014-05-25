@@ -1,5 +1,10 @@
 'use strict';
 
+// angular.module('ngDay2App', ['ui.bootstrap']);
+// function CollapseDemoCtrl($scope) {
+//   $scope.isCollapsed = false;
+// };
+
 angular.module('ngDay2App')
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
 
@@ -70,7 +75,33 @@ angular.module('ngDay2App')
     };
   });
 
+  angular.module('ngDay2App')
+  .controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
 
+    $scope.addItem = function() {
+      $location.path('/product');
+    };
+    $scope.newItem = function(product) {
+      CartItemsSvc.create(product)
+      $location.path('/cart');
+    };
+    $scope.products = CartItemsSvc.query();
+  })
+  .controller('CartItemCtrl', function($scope, $location, $routeParams, CartItemSvc) {
+
+    $scope.product = CartItemSvc.show({ id: $routeParams.id });
+    $scope.delete = function() { 
+      CartItemSvc.delete({ id: $routeParams.id });
+      $location.path('/cart');
+    };
+    $scope.edit = function() {
+      CartItemSvc.edit($scope.product);
+      $location.path('/cart');
+    };
+
+  });
+
+  
 
 
 

@@ -28,6 +28,22 @@ angular
         templateUrl: 'views/product-editDetail.html',
         controller: 'ProductCtrl'
       })
+      .when('/cart', {
+        templateUrl: 'views/cart-list.html',
+        controller: 'CartItemsCtrl'
+      })
+      .when('/newcart', {
+        templateUrl: 'views/cart-create.html',
+        controller: 'CartItemsCtrl'
+      })
+      .when('/cart/:id', {
+        templateUrl: 'views/cart-detail.html',
+        controller: 'CartItemCtrl'
+      })
+      .when('/cart/:id/edit', {
+        templateUrl: 'views/cart-editDetail.html',
+        controller: 'CartItemCtrl'
+      })
       .when('/blog', {
         templateUrl: 'views/blog-list.html',
         controller: 'PostsCtrl'

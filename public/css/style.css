@@ -69,3 +69,18 @@ body {
 .nav-tabs {
  border-bottom: none; 
 }
+
+.cart {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.checkOut {
+	border: 1px solid black;
+	margin-top: 100px;
+	min-height: 400px;
+}

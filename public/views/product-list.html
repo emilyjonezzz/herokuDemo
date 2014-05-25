@@ -78,8 +78,19 @@
           </form>
         </div>
       </section>
+      <div>
+        <p>Quantity</p>
+        <input type="number" ng-model="product.quantity">
+        <button ng-click="addItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
+      </div>
 
 </section>
+
+
+
+<a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right cart"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
+
+</div>
 
 </div>
 
