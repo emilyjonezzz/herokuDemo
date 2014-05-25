@@ -14,7 +14,7 @@ body {
 	background-color: #fff;
 	min-height: 800px;
 	max-width: 1050px;
-	opacity: 0.95;
+	opacity: 0.97;
 
 }
 
@@ -25,6 +25,12 @@ body {
 
 .createBtn {
 	margin-left: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.postBtn {
+	margin-left: 1000px;
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
