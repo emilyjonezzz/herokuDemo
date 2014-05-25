@@ -19,14 +19,13 @@ body {
 }
 
 .productSection {
-	margin-top: 100px;
+	margin-top: 150px;
 	border-bottom: 1px solid #ddd;
 }
 
 .createBtn {
 	margin-left: 100px;
 	margin-top: 50px;
-	margin-bottom: 50px;
 }
 
 .postBtn {
