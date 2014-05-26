@@ -79,7 +79,7 @@
       </section>
       <div>
         <p>Quantity</p>
-        <input type="text" ng-model="product.quantity">
+        <input type="number" ng-model="product.quantity">
         <button ng-click="addItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
       </div>
 
@@ -87,7 +87,7 @@
 
 <div class="checkOut">
 <h3><span class="glyphicon glyphicon-shopping-cart shopCart"></span> Cart</h3>
-<div class="jumbotron">
+<div class="jumbotron jumboCart">
 <div ng-repeat="product in purchased" class="purchaseItem">
   <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button>
   <h4>{{product.title | uppercase}}: {{product.quantity}} ea</h4>
