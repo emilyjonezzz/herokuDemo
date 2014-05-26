@@ -42,6 +42,14 @@ angular.module('ngDay2App')
       $location.path('/product');
     };
     $scope.products = ProductsSvc.query();
+    $scope.addItem = function(product) {
+    $scope.purchased.push(product);
+    }
+    $scope.purchased = [];
+    $scope.removeItem = function(index) {
+      $scope.purchased.splice(index, 1);
+    }
+    $scope.purchased = [];
   })
   .controller('ProductCtrl', function($scope, $location, $routeParams, ProductSvc) {
 
@@ -79,27 +87,29 @@ angular.module('ngDay2App')
   .controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
 
     $scope.addItem = function() {
-      $location.path('/product');
-    };
-    $scope.newItem = function(product) {
-      CartItemsSvc.create(product)
       $location.path('/cart');
     };
-    $scope.products = CartItemsSvc.query();
+    $scope.newItem = function(item) {
+      CartItemsSvc.create(item)
+      $location.path('/cart');
+    };
+    $scope.items = CartItemsSvc.query();
   })
   .controller('CartItemCtrl', function($scope, $location, $routeParams, CartItemSvc) {
 
-    $scope.product = CartItemSvc.show({ id: $routeParams.id });
+    $scope.item = CartItemSvc.show({ id: $routeParams.id });
     $scope.delete = function() { 
       CartItemSvc.delete({ id: $routeParams.id });
       $location.path('/cart');
     };
     $scope.edit = function() {
-      CartItemSvc.edit($scope.product);
+      CartItemSvc.edit($scope.item);
       $location.path('/cart');
     };
 
   });
+
+
 
   
 

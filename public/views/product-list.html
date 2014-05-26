@@ -9,11 +9,10 @@
 
 
 <div class="col-md-12">
-
 <button class="btn btn-sm btn-success pull-right createBtn" data-ng-click="createProduct()">Create New Product</button>
 <section class="productSection" data-ng-repeat="product in products">
 	<h3>
-		{{product.title}}
+		{{product.title | uppercase}}
 		<em class="pull-right"> {{product.price | currency}} </em>
 	</h3>
 
@@ -80,13 +79,23 @@
       </section>
       <div>
         <p>Quantity</p>
-        <input type="number" ng-model="product.quantity">
+        <input type="text" ng-model="product.quantity">
         <button ng-click="addItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
       </div>
 
 </section>
 
-
+<div class="checkOut">
+<h3><span class="glyphicon glyphicon-shopping-cart shopCart"></span> Cart</h3>
+<div class="jumbotron">
+<div ng-repeat="product in purchased" class="purchaseItem">
+  <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button>
+  <h4>{{product.title | uppercase}}: {{product.quantity}} ea</h4>
+  <p>{{product.price * product.quantity | currency}}<p>
+</div>
+<h3 class="pull-right total">Total: {{}}</h3>
+</div>
+</div>
 
 <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right cart"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
 

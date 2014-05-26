@@ -85,7 +85,22 @@ a:hover {
 }
 
 .checkOut {
-	border: 1px solid black;
-	margin-top: 100px;
+	margin-left: 20%;
+}
+
+.jumbotron {
 	min-height: 400px;
+	max-width: 600px;
+}
+
+.shopCart {
+    margin-top: 80px;
+}
+
+.purchaseItem {
+    border-bottom: 2px dashed #000;
+}
+
+.total {
+	margin-right: 50px;
 }
