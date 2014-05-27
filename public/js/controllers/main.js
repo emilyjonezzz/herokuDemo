@@ -18,7 +18,7 @@ angular.module('ngDay2App')
     };
     $scope.posts = PostsSvc.query();
   })
-  .controller('PostCtrl', function($scope, $location, $routeParams, PostSvc) {
+  .controller('PostCtrl', function ($scope, $location, $routeParams, PostSvc) {
 
     $scope.post = PostSvc.show({ id: $routeParams.id });
     $scope.delete = function() { 
@@ -30,9 +30,9 @@ angular.module('ngDay2App')
       $location.path('/blog');
     };
 
-  });
+  })
 
-angular.module('ngDay2App')
+
   .controller('ProductsCtrl', function ($scope, $location, ProductsSvc) {
 
     $scope.createProduct = function() {
@@ -52,7 +52,7 @@ angular.module('ngDay2App')
     }
     $scope.purchased = [];
   })
-  .controller('ProductCtrl', function($scope, $location, $routeParams, ProductSvc) {
+  .controller('ProductCtrl', function ($scope, $location, $routeParams, ProductSvc) {
 
     $scope.product = ProductSvc.show({ id: $routeParams.id });
     $scope.delete = function() { 
@@ -82,9 +82,9 @@ angular.module('ngDay2App')
       product.reviews.push(this.review);
       this.review = {};
     };
-  });
+  })
 
-  angular.module('ngDay2App')
+  
   .controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
 
     $scope.addItem = function() {
@@ -96,7 +96,7 @@ angular.module('ngDay2App')
     };
     $scope.items = CartItemsSvc.query();
   })
-  .controller('CartItemCtrl', function($scope, $location, $routeParams, CartItemSvc) {
+  .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
 
     $scope.item = CartItemSvc.show({ id: $routeParams.id });
     $scope.delete = function() { 
