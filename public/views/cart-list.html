@@ -10,7 +10,7 @@
   <div ng-repeat="item in items" class="purchaseItem">
     <button ng-click="delete($index)" class="btn btn-sm btn-danger pull-right">Remove</button>
     <h4>{{item.title}}: {{item.quantity}} ea</h4>
-    <p>{{item.quantity * item.price | currency}}<p>
+    <p>{{item.quantity * item.price}}<p>
   </div>
   <h3>Total: {{total}}</h3>
 </div>
