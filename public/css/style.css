@@ -20,7 +20,7 @@ body {
 
 .productSection {
 	margin-top: 150px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #838383;
 }
 
 .createBtn {
@@ -117,4 +117,9 @@ a:hover {
 
 .total {
 	margin-right: 50px;
+}
+
+.blogPost {
+	margin-top: 150px;
+	border-bottom: 1px solid #838383;
 }
