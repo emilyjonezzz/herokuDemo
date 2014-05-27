@@ -87,10 +87,10 @@ angular.module('ngDay2App')
   
   .controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
 
-    $scope.addItem = function() {
-      $location.path('/cart');
-    };
-    $scope.newItem = function(item) {
+    // $scope.addItem = function() {
+    //   $location.path('/cart');
+    // };
+    $scope.addItem = function(item) {
       CartItemsSvc.create(item)
       $location.path('/cart');
     };
