@@ -12,7 +12,7 @@
 <button class="btn btn-sm btn-success pull-right createBtn" data-ng-click="createProduct()">Create New Product</button>
 <section class="productSection" data-ng-repeat="product in products">
   
-  <my-directive></my-directive>
+  <!-- <my-directive></my-directive> -->
 	<!-- <h3>
 		{{product.title | uppercase}}
 		<em class="pull-right"> {{product.price | currency}} </em>
@@ -20,7 +20,7 @@
 
 	<img ng-src="{{product.pic1}}"></img> -->
 
-<!-- 	<section ng-controller="PanelController as panel">
+	<section ng-controller="PanelController as panel">
 		<button class="btn btn-sm btn-warning pull-right adminBtn"><a href="#/product/{{product._id}}">Edit Product</a></button>
         <ul class="nav nav-tabs">
           <li ng-class="{active: panel.isSelected(0)}"> 
@@ -49,7 +49,7 @@
         <p>Quantity</p>
         <input type="number" data-ng-model="product.quantity">
         <button ng-click="addItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
-  </div> -->
+  </div>
      
 
 </section>
