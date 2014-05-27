@@ -88,17 +88,6 @@
 
 </section>
 
-<div class="checkOut">
-<h3><span class="glyphicon glyphicon-shopping-cart shopCart"></span> Cart</h3>
-<div class="jumbotron jumboCart">
-<div ng-repeat="product in purchased" class="purchaseItem">
-  <button ng-click="removeItem($index)" class="btn btn-sm btn-danger pull-right">Remove</button>
-  <h4>{{product.title | uppercase}}: {{product.quantity}} ea</h4>
-  <p>{{product.price * product.quantity | currency}}<p>
-</div>
-<h3 class="pull-right total">Total: {{}}</h3>
-</div>
-</div>
 
 <a ng-href="#/cart"><button class="btn btn-lg btn-default pull-right cart"><span class="glyphicon glyphicon-shopping-cart"></span> Check Out</button></a>
 
