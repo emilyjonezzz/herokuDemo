@@ -13,12 +13,12 @@
 <section class="productSection" data-ng-repeat="product in products">
   
   <!-- <my-directive></my-directive> -->
-	<!-- <h3>
+	<h3>
 		{{product.title | uppercase}}
 		<em class="pull-right"> {{product.price | currency}} </em>
 	</h3>
 
-	<img ng-src="{{product.pic1}}"></img> -->
+	<img ng-src="{{product.pic1}}"></img>
 
 	<section ng-controller="PanelController as panel">
 		<button class="btn btn-sm btn-warning pull-right adminBtn"><a href="#/product/{{product._id}}">Edit Product</a></button>
