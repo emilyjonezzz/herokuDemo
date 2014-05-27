@@ -6,12 +6,20 @@
 <a ng-href="#/product"><button class="btn btn-lg btn-default pull-right"> Continue Shopping</button></a>
 
 <div class="col-md-8">
+
+
+
+<div class="CartItemsCtrl">
 <div class="checkOut">
-  <div ng-repeat="item in items" class="purchaseItem">
-    <button ng-click="delete($index)" class="btn btn-sm btn-danger pull-right">Remove</button>
-    <h4>{{product.title}}: {{product.quantity}} ea</h4>
-    <p>{{product.price * product.quantity | currency}}<p>
+  <div ng-repeat="product in products" class="purchaseItem">
+    <button ng-click="delete(item)" class="btn btn-sm btn-danger pull-right">Remove</button>
+    <h4>{{product.title}}</h4>
+    <p>{{product.price | currency}}<p>
+    <a ng-href="#/product"><button class="btn btn-lg btn-default pull-right"> Continue Shopping</button></a>
   </div>
   <h3>Total: {{total}}</h3>
 </div>
+</div>
+
+
 </div>

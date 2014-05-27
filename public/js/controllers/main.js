@@ -1,9 +1,10 @@
 'use strict';
 
-// angular.module('ngDay2App', ['ui.bootstrap']);
-// function CollapseDemoCtrl($scope) {
-//   $scope.isCollapsed = false;
-// };
+angular.module('ngDay2App');
+function CollapseDemoCtrl($scope) {
+  $scope.isCollapsed = true;
+};
+
 
 angular.module('ngDay2App')
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
@@ -42,14 +43,14 @@ angular.module('ngDay2App')
       $location.path('/product');
     };
     $scope.products = ProductsSvc.query();
-    $scope.addItem = function(product) {
-    $scope.purchased.push(product);
-    }
-    $scope.purchased = [];
-    $scope.removeItem = function(index) {
-      $scope.purchased.splice(index, 1);
-    }
-    $scope.purchased = [];
+    // $scope.addItem = function(product) {
+    // $scope.purchased.push(product);
+    // }
+    // $scope.purchased = [];
+    // $scope.removeItem = function(index) {
+    //   $scope.purchased.splice(index, 1);
+    // }
+    // $scope.purchased = [];
   })
   .controller('ProductCtrl', function($scope, $location, $routeParams, ProductSvc) {
 
@@ -84,16 +85,16 @@ angular.module('ngDay2App')
   });
 
   angular.module('ngDay2App')
-  .controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
+  .controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc, CartItemSvc) {
 
-    $scope.addItem = function() {
+    // $scope.addItem = function() {
+    //   $location.path('/product');
+    // };
+    $scope.addItem = function(product) {
+      CartItemsSvc.create(product);
       $location.path('/cart');
     };
-    $scope.newItem = function(item) {
-      CartItemsSvc.create(item)
-      $location.path('/cart');
-    };
-    $scope.items = CartItemsSvc.query();
+    // $scope.items = CartItemsSvc.query();
   })
   .controller('CartItemCtrl', function($scope, $location, $routeParams, CartItemSvc) {
 

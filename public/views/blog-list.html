@@ -13,21 +13,22 @@
 <button class="btn btn-sm btn-success pull-right postBtn" data-ng-click="createPost()">Create New Post</button>
 <section class="blogPost" data-ng-repeat="post in posts">
 	<h3>{{post.title}}</h3>
+	<div ng-controller="CollapseDemoCtrl">
+	<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View Post</button>
+	<hr>
+		<div collapse="isCollapsed">
+			<div class="well well-lg">
+				<img ng-src="{{post.pic}}"></img>
+				<p>{{post.content}}</p>
+				<em>by: {{post.author}}</em>
+				<br>
+			</div> 
+		</div>
+	</div>
+	
 
-	<img ng-src="{{post.pic}}"></img>
-	<p>{{post.content}}</p>
-	<em>by: {{post.author}}</em>
-	<br>
-
-	<a href="#/blog/{{post._id}}">view more</a>
+	<a href="#/blog/{{post._id}}">Admin</a>
 </section>
 
 </div>
 
-<div ng-controller="CollapseDemoCtrl">
-	<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
-	<hr>
-	<div collapse="isCollapsed">
-		<div class="well well-lg">Some content</div> 
-	</div>
-</div>

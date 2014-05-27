@@ -5,7 +5,9 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap',
+    'ngDay2App.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -30,10 +32,6 @@ angular
       })
       .when('/cart', {
         templateUrl: 'views/cart-list.html',
-        controller: 'CartItemsCtrl'
-      })
-      .when('/newcart', {
-        templateUrl: 'views/cart-create.html',
         controller: 'CartItemsCtrl'
       })
       .when('/cart/:id', {
@@ -65,4 +63,4 @@ angular
       });
   });
 
-angular.module('myModule', ['ui.bootstrap']);
+angular.module('ngDay2App.directives', []);
