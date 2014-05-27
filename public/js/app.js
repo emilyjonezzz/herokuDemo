@@ -5,8 +5,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute',
-    'ui.bootstrap'
+    'ngRoute'
+    // 'ui.bootstrap'
     // 'ngDay2App.directives'
   ])
   .config(function ($routeProvider) {
