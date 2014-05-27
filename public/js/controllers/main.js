@@ -94,7 +94,7 @@ angular.module('ngDay2App')
       CartItemsSvc.create(product);
       $location.path('/cart');
     };
-    // $scope.items = CartItemsSvc.query();
+    $scope.items = CartItemsSvc.query();
   })
   .controller('CartItemCtrl', function($scope, $location, $routeParams, CartItemSvc) {
 
