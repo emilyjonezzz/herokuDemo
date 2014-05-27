@@ -11,7 +11,10 @@
 <div class="col-md-12">
 <button class="btn btn-sm btn-success pull-right createBtn" data-ng-click="createProduct()">Create New Product</button>
 <section class="productSection" data-ng-repeat="product in products">
-  <h3>
+  
+  <my-directive></my-directive>
+
+  <!-- <h3>
     {{product.title | uppercase}}
     <em class="pull-right"> {{product.price | currency}} </em>
   </h3>
@@ -81,7 +84,7 @@
         <p>Quantity</p>
         <input type="number" ng-model="product.quantity">
         <button ng-click="addItem(product)" class="btn btn-sm btn-success">Add to Cart</button>
-      </div>
+      </div> -->
 
 </section>
 
