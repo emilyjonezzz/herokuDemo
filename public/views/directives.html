@@ -12,13 +12,10 @@
             <a href ng-click="panel.selectTab(0)">Description</a> 
           </li>
           <li ng-class="{active: panel.isSelected(1)}"> 
-            <a href ng-click="panel.selectTab(1)">Photo 2</a> 
+            <a href ng-click="panel.selectTab(1)">More Photos</a> 
           </li>
           <li ng-class="{active: panel.isSelected(2)}"> 
-            <a href ng-click="panel.selectTab(2)">Photo 3</a> 
-          </li>
-          <li ng-class="{active: panel.isSelected(3)}"> 
-            <a href ng-click="panel.selectTab(3)">Rating</a> 
+            <a href ng-click="panel.selectTab(2)">Rating</a> 
           </li>
         </ul>
         <div class="panel" ng-show="panel.isSelected(0)">
@@ -26,12 +23,21 @@
           <p>{{product.description}}</p>
         </div>
         <div class="panel" ng-show="panel.isSelected(1)">
-          <img ng-src="{{product.pic2}}"></img>
+          <div>
+            <carousel interval='3000'>
+              <slide class="active">
+                <img ng-src="{{product.pic1}}" style="margin:auto;">
+              </slide>
+              <slide>
+                <img ng-src="{{product.pic2}}" style="margin:auto;">
+              </slide>
+              <slide>
+                <img ng-src="{{product.pic3}}" style="margin:auto;">
+              </slide>
+            </carousel>
+          </div>
         </div>
         <div class="panel" ng-show="panel.isSelected(2)">
-          <img ng-src="{{product.pic3}}"></img>
-        </div>
-        <div class="panel" ng-show="panel.isSelected(3)">
           <div ng-controller="RatingDemoCtrl">
             <h4>Rate</h4>
             <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
@@ -44,20 +50,6 @@
             <hr />
           </div>
         </div>
-
-    <div>
-      <carousel interval='4000'>
-        <slide class="active">
-          <img ng-src="{{product.pic1}}" style="margin:auto;">
-        </slide>
-        <slide>
-          <img ng-src="{{product.pic2}}" style="margin:auto;">
-        </slide>
-        <slide>
-          <img ng-src="{{product.pic3}}" style="margin:auto;">
-        </slide>
-      </carousel>
-    </div>
       </section>
 
 
