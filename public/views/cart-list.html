@@ -11,7 +11,7 @@
     <a href="#/cart/{{cartitem._id}}"><button class="btn btn-sm btn-warning pull-right">Edit Item</button></a>
     <h4>{{cartitem.title}}: {{cartitem.quantity}} ea</h4>
     <p>{{cartitem.quantity * cartitem.price | currency}}<p>
-    	<a ng-click="delete(cartitem)">Delete</a>
+    	<a ng-click="deleteItem()">Delete</a>
   </div>
   <h3>Total: {{}}</h3>
 </div>
