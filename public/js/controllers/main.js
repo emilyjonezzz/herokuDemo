@@ -86,6 +86,15 @@ angular.module('ngDay2App')
       $location.path('/cart');
     };
     $scope.items = CartItemsSvc.query();
+    $scope.$watch('items', function() {
+      var cartTotal = 0;
+
+      $scope.items.forEach(function(item) {
+        cartTotal += item.total();
+      });
+
+      $scope.cartTotal = cartTotal;
+    }, true);
   })
   .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
 
