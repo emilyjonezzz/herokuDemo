@@ -29,23 +29,8 @@
           <img ng-src="{{product.pic2}}"></img>
         </div>
         <div class="panel" ng-show="panel.isSelected(2)">
-          <!-- <img ng-src="{{product.pic3}}"></img> -->
-            <div class="imagecarousel" ng-show="isVisible">
-              <div>
-                <carousel interval='4000'>
-                  <slide class="active">
-                    <img ng-src="{{product.pic1}}" style="margin:auto;">
-                  </slide>
-                  <slide>
-                    <img ng-src="{{product.pic2}}" style="margin:auto;">
-                  </slide>
-                  <slide>
-                    <img ng-src="{{product.pic3}}" style="margin:auto;">
-                  </slide>
-                </carousel>
-              </div> 
-            </div>
-          </div>
+          <img ng-src="{{product.pic3}}"></img>
+        </div>
         <div class="panel" ng-show="panel.isSelected(3)">
           <div ng-controller="RatingDemoCtrl">
             <h4>Rate</h4>
@@ -60,6 +45,21 @@
           </div>
         </div>
       </section>
+      <div class="imagecarousel" ng-show="isVisible">
+              <div>
+                <carousel interval='4000'>
+                  <slide class="active">
+                    <img ng-src="{{product.pic1}}" style="margin:auto;">
+                  </slide>
+                  <slide>
+                    <img ng-src="{{product.pic2}}" style="margin:auto;">
+                  </slide>
+                  <slide>
+                    <img ng-src="{{product.pic3}}" style="margin:auto;">
+                  </slide>
+                </carousel>
+              </div> 
+            </div>
 
       
 
