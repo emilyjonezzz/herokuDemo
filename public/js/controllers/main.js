@@ -81,8 +81,8 @@ angular.module('ngDay2App')
     // $scope.addItem = function() {
     //   $location.path('/cart');
     // };
-    $scope.addItem = function(cartItem) {
-      CartItemsSvc.create(cartItem)
+    $scope.addItem = function(item) {
+      CartItemsSvc.create(item)
       $location.path('/cart');
     };
     $scope.items = CartItemsSvc.query();
