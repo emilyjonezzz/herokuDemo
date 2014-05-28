@@ -83,7 +83,7 @@ angular.module('ngDay2App')
     // };
     $scope.addItem = function(item) {
       CartItemsSvc.create(item)
-      $location.path('/cart');
+      $location.path('/product');
     };
     $scope.items = CartItemsSvc.query();
     // $scope.$watch('items', function() {
