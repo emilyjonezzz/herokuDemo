@@ -6,6 +6,7 @@
 <a ng-href="#/product"><button class="btn btn-lg btn-default pull-right"> Continue Shopping</button></a>
 
 <div class="col-md-8">
+<div ng-controller="CartItemCtrl">
 <div class="checkOut">
   <div ng-repeat="cartitem in items" class="purchaseItem">
     <a href="#/cart/{{cartitem._id}}"><button class="btn btn-sm btn-warning pull-right">Edit Item</button></a>
@@ -14,5 +15,6 @@
     	<a ng-click="deleteItem()">Delete</a>
   </div>
   <h3>Total: {{cartTotal}}</h3>
+</div>
 </div>
 </div>
