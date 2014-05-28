@@ -7,7 +7,7 @@
 
 <div class="col-md-8">
 <div class="checkOut">
-  <div ng-repeat="item in items" class="purchaseItem">
+  <div ng-repeat="cartitem in items" class="purchaseItem">
     <a href="#/cart/{{item._id}}"><button class="btn btn-sm btn-warning pull-right">Edit Item</button></a>
     <h4>{{cartitem.title}}: {{cartitem.quantity}} ea</h4>
     <p>{{cartitem.quantity * cartitem.price | currency}}<p>
