@@ -4,5 +4,16 @@
     <li class="active"><a ng-href="#/product">Shop</a></li>
     <li><a ng-href="#/blog">Blog</a></li>
   </ul>
-  <h2>Checkout</h2>
+  <h2>Edit Item</h2>
+</div>
+
+<div class="col-md-12">
+
+
+<section>
+	<h3>{{item.title}}</h3>
+	<p>{{item.quantity}}</p>
+	<a href="#/cart/{{item._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
+</section>
+
 </div>
