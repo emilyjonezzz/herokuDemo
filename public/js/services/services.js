@@ -54,7 +54,7 @@ angular.module('ngDay2App')
 				id: '@_id'
 			},
 			{
-				show: { method: 'GET'},
+				showCartItem: { method: 'GET'},
 				edit: { method: 'PUT'},
 				delete: { method: 'DELETE'}
 			}
