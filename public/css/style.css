@@ -34,15 +34,6 @@ body {
 	margin-bottom: 50px;
 }
 
-.adminBtn a {
-  	color: #fff;
-}
-
-.adminBtn a:hover {
-	color: #fff;
-	text-decoration: none;
-}
-
 .header h1 {
     margin-top: 0;
     margin-bottom: 0;

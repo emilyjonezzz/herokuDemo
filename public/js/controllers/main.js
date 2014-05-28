@@ -4,6 +4,15 @@ angular.module('ngDay2App');
 function CollapseDemoCtrl($scope) {
   $scope.isCollapsed = true;
 };
+var RatingDemoCtrl = function ($scope) {
+  $scope.max = 10;
+  $scope.isReadonly = false;
+
+  $scope.hoveringOver = function(value) {
+    $scope.overStar = value;
+    $scope.percent = 100 * (value / $scope.max);
+  };
+};
 
 
 angular.module('ngDay2App')
@@ -67,17 +76,6 @@ angular.module('ngDay2App')
     return this.tab === checkTab;
   };
   })
-
-  .controller("ReviewController", function() {
-    this.review = {};
-
-    this.addReview = function(product) {
-      product.reviews.push(this.review);
-      this.review = {};
-    };
-  })
-
-  
   .controller('CartItemsCtrl', function ($scope, $location, CartItemsSvc) {
 
     // $scope.addItem = function() {

@@ -6,7 +6,7 @@
 <img ng-src="{{product.pic1}}"></img>
 
   <section ng-controller="PanelController as panel">
-    <button class="btn btn-sm btn-warning pull-right adminBtn"><a href="#/product/{{product._id}}">Edit Product</a></button>
+    <a href="#/product/{{product._id}}"><button class="btn btn-sm btn-warning pull-right">Edit Product</button></a>
         <ul class="nav nav-tabs">
           <li ng-class="{active: panel.isSelected(0)}"> 
             <a href ng-click="panel.selectTab(0)">Description</a> 
@@ -16,6 +16,9 @@
           </li>
           <li ng-class="{active: panel.isSelected(2)}"> 
             <a href ng-click="panel.selectTab(2)">Photo 3</a> 
+          </li>
+          <li ng-class="{active: panel.isSelected(3)}"> 
+            <a href ng-click="panel.selectTab(3)">Rating</a> 
           </li>
         </ul>
         <div class="panel" ng-show="panel.isSelected(0)">
@@ -28,8 +31,23 @@
         <div class="panel" ng-show="panel.isSelected(2)">
           <img ng-src="{{product.pic3}}"></img>
         </div>
+        <div class="panel" ng-show="panel.isSelected(3)">
+          <div ng-controller="RatingDemoCtrl">
+            <h4>Rate</h4>
+            <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+            <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly"></span>
+
+            <pre style="margin:15px 0;">Rate: <b>{{rate}}</b></pre>
+
+            <button class="btn btn-sm btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>
+           <!--  <button class="btn btn-sm btn-default" ng-click="isReadonly = ! isReadonly">Toggle Readonly</button> -->
+            <hr />
+          </div>
+        </div>
       </section>
+
       
+
   <div ng-controller="CartItemsCtrl">
         <p>Quantity</p>
         <input type="number" data-ng-model="product.quantity">
