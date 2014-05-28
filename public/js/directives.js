@@ -16,7 +16,7 @@ angular.module('ngDay2App.directives')
 			link: function(scope, element, attrs) {
 				element.on('click', function(e) {
 					element.children().toggleClass('logoChange');
-					alert('it works');
+					alert('Welcome to our store!');
 				});
 			}
 		}

@@ -13,7 +13,7 @@ body {
 .container {
 	background-color: #fff;
 	min-height: 800px;
-	width: 1050px;
+	max-width: 1050px;
 	opacity: 0.97;
 
 }
