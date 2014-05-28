@@ -38,11 +38,11 @@ angular
       //   templateUrl: 'views/cart-create.html',
       //   controller: 'CartItemsCtrl'
       // })
-      .when('/cart/:id', {
+      .when('/cart/:cartid', {
         templateUrl: 'views/cart-detail.html',
         controller: 'CartItemCtrl'
       })
-      .when('/cart/:id/edit', {
+      .when('/cart/:cartid/edit', {
         templateUrl: 'views/cart-editDetail.html',
         controller: 'CartItemCtrl'
       })

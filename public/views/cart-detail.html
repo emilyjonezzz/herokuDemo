@@ -8,12 +8,12 @@
 </div>
 
 <div class="col-md-12">
-<div ng-controller="CartItemCtrl">
+
 <section>
 	<p>{{cartitem | json}}</p>
 	<h4>{{cartitem.title}}</h4>
 	<h3>{{cartitem.quantity}} ea</h3>
 	<a href="#/cart/{{cartitem._id}}/edit">Edit</a> | <a ng-click="deleteItem()">Delete</a>
 </section>
-</div>
+
 </div>

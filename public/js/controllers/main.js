@@ -98,9 +98,9 @@ angular.module('ngDay2App')
   })
   .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
 
-    $scope.cartitem = CartItemSvc.showCartItem({ id: 5380c3a2af7d7f0200000001 });
+    $scope.cartitem = CartItemSvc.showCartItem({ cartid: $routeParams.id });
     $scope.deleteItem = function() { 
-      CartItemSvc.delete({ id: $routeParams.id });
+      CartItemSvc.delete({ cartid: $routeParams.id });
       $location.path('/cart');
     };
     $scope.editItem = function() {

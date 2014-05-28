@@ -49,9 +49,9 @@ angular.module('ngDay2App')
 			});
 	})
 	.factory('CartItemSvc', function($resource) {
-		return $resource('api/collections/shoppingcart/:id',
+		return $resource('api/collections/shoppingcart/:cartid',
 			{
-				id: '@_id'
+				cartid: '@_id'
 			},
 			{
 				showCartItem: { method: 'GET'},
