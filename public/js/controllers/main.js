@@ -43,14 +43,7 @@ angular.module('ngDay2App')
       $location.path('/product');
     };
     $scope.products = ProductsSvc.query();
-    $scope.addItem = function(product) {
-    $scope.purchased.push(product);
-    }
-    $scope.purchased = [];
-    $scope.removeItem = function(index) {
-      $scope.purchased.splice(index, 1);
-    }
-    $scope.purchased = [];
+    
   })
   .controller('ProductCtrl', function ($scope, $location, $routeParams, ProductSvc) {
 
@@ -99,11 +92,11 @@ angular.module('ngDay2App')
   .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
 
     $scope.item = CartItemSvc.show({ id: $routeParams.id });
-    $scope.delete = function() { 
+    $scope.deleteItem = function() { 
       CartItemSvc.delete({ id: $routeParams.id });
       $location.path('/cart');
     };
-    $scope.edit = function() {
+    $scope.editItem = function() {
       CartItemSvc.edit($scope.item);
       $location.path('/cart');
     };
