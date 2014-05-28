@@ -69,5 +69,5 @@ angular
 
 angular.module('ngDay2App.directives', []);
 
-// angular.module('ui.bootstrap', []);
+
 

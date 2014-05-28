@@ -13,7 +13,7 @@ body {
 .container {
 	background-color: #fff;
 	min-height: 800px;
-	max-width: 1050px;
+	width: 1050px;
 	opacity: 0.97;
 
 }
@@ -59,11 +59,7 @@ body {
     top:25%;
  }
 
-/*.logo {
-	margin-left: auto;
-	margin-right: auto;
 
-}*/
 .nav > li > a {
     color: #5e5e5e;
 }
@@ -115,4 +111,21 @@ a:hover {
 .blogPost {
 	margin-top: 150px;
 	border-bottom: 1px solid #838383;
+}
+
+.footer {
+	min-height: 50px;
+	max-height: 50px;
+	background-color: #000;
+    padding-top: 10px;
+    position: absolute;
+    position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.logo {
+	color: #fff;
+	float: right;
 }
