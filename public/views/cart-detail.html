@@ -10,7 +10,7 @@
 <div class="col-md-12">
 
 <section>
-	<h4>{{cartitem.title}}</h4>
+	<h4 data-ng-model="cartitem.title">{{cartitem.title}}</h4>
 	<h3>{{cartitem.quantity}} ea</h3>
 	<a href="#/cart/{{cartitem._id}}/edit">Edit</a> | <a ng-click="deleteItem()">Delete</a>
 </section>

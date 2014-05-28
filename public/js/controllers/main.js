@@ -86,15 +86,15 @@ angular.module('ngDay2App')
       $location.path('/cart');
     };
     $scope.items = CartItemsSvc.query();
-    $scope.$watch('items', function() {
-      var cartTotal = cartitem.quantity * cartitem.price();
+    // $scope.$watch('items', function() {
+    //   var cartTotal = cartitem.quantity * cartitem.price();
 
-      $scope.items.forEach(function(cartitem) {
-        cartTotal += cartitem.quantity * cartitem.price();
-      });
+    //   $scope.items.forEach(function(cartitem) {
+    //     cartTotal += cartitem.quantity * cartitem.price();
+    //   });
 
-      $scope.cartTotal = cartTotal;
-    }, true);
+    //   $scope.cartTotal = cartTotal;
+    // }, true);
   })
   .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
 
