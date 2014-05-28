@@ -89,8 +89,8 @@ angular.module('ngDay2App')
     $scope.$watch('items', function() {
       var cartTotal = 0;
 
-      $scope.items.forEach(function(item) {
-        cartTotal += item.total();
+      $scope.items.forEach(function(cartitem) {
+        cartTotal += cartitem.quantity * cartitem.price();
       });
 
       $scope.cartTotal = cartTotal;
