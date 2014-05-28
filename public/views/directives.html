@@ -6,16 +6,13 @@
 <img ng-src="{{product.pic1}}"></img>
 
   <section ng-controller="PanelController as panel">
-    <a href="#/product/{{product._id}}"><button class="btn btn-sm btn-warning pull-right">Edit Product</button></a>
+    <a href="#/product/{{product._id}}"><button class="btn btn-sm btn-default pull-right">More Details</button></a>
         <ul class="nav nav-tabs">
           <li ng-class="{active: panel.isSelected(0)}"> 
             <a href ng-click="panel.selectTab(0)">Description</a> 
           </li>
           <li ng-class="{active: panel.isSelected(1)}"> 
-            <a href ng-click="panel.selectTab(1)">More Photos</a> 
-          </li>
-          <li ng-class="{active: panel.isSelected(2)}"> 
-            <a href ng-click="panel.selectTab(2)">Rating</a> 
+            <a href ng-click="panel.selectTab(1)">Rating</a> 
           </li>
         </ul>
         <div class="panel" ng-show="panel.isSelected(0)">
@@ -23,21 +20,6 @@
           <p>{{product.description}}</p>
         </div>
         <div class="panel" ng-show="panel.isSelected(1)">
-          <div>
-            <carousel interval='3000'>
-              <slide class="active">
-                <img ng-src="{{product.pic1}}" style="margin:auto;">
-              </slide>
-              <slide>
-                <img ng-src="{{product.pic2}}" style="margin:auto;">
-              </slide>
-              <slide>
-                <img ng-src="{{product.pic3}}" style="margin:auto;">
-              </slide>
-            </carousel>
-          </div>
-        </div>
-        <div class="panel" ng-show="panel.isSelected(2)">
           <div ng-controller="RatingDemoCtrl">
             <h4>Rate</h4>
             <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>

@@ -1,10 +1,10 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li><a ng-href="#">Home</a></li>
-    <li class="active"><a ng-href="#/product">Shop</a></li>
+    <li><a ng-href="#/product">Shop</a></li>
     <li><a ng-href="#/blog">Blog</a></li>
   </ul>
-  <h2>Edit Products</h2>
+  <h2>Product Detail</h2>
 </div>
 
 
@@ -13,9 +13,19 @@
 
 <section>
 	<h3>{{product.title}}</h3>
-	<img ng-src="{{product.pic1}}"></img>
-	<img ng-src="{{product.pic2}}"></img>
-	<img ng-src="{{product.pic3}}"></img>
+	<div>
+	    <carousel interval='3000'>
+	      <slide class="active">
+	        <img ng-src="{{product.pic1}}" style="margin:auto;">
+	      </slide>
+	      <slide>
+	        <img ng-src="{{product.pic2}}" style="margin:auto;">
+	      </slide>
+	      <slide>
+	        <img ng-src="{{product.pic3}}" style="margin:auto;">
+	      </slide>
+	    </carousel>
+	  </div>
 	<p>{{product.description}}</p>
 	<p>{{product.price | currency}}</p>
 	<a href="#/product/{{product._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
