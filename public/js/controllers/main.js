@@ -89,7 +89,7 @@ angular.module('ngDay2App')
     };
     $scope.items = CartItemsSvc.query();
   })
-  .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc) {
+  .controller('CartItemCtrl', function ($scope, $location, $routeParams, CartItemSvc, CartItemsSvc) {
 
     $scope.item = CartItemSvc.show({ id: $routeParams.id });
     $scope.deleteItem = function() { 
