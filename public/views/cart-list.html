@@ -7,10 +7,10 @@
 
 <div class="col-md-8">
 <div class="checkOut">
-  <div ng-repeat="item in items" class="purchaseItem">
-    <a href="#/cart/{{item._id}}"><button class="btn btn-sm btn-warning pull-right">Edit Item</button></a>
-    <h4>{{item.title}}: {{item.quantity}} ea</h4>
-    <p>{{item.quantity * item.price | currency}}<p>
+  <div ng-repeat="cartItem in items" class="purchaseItem">
+    <a href="#/cart/{{cartItem._id}}"><button class="btn btn-sm btn-warning pull-right">Edit Item</button></a>
+    <h4>{{cartItem.title}}: {{cartItem.quantity}} ea</h4>
+    <p>{{cartItem.quantity * cartItem.price | currency}}<p>
   </div>
   <h3>Total: {{item.quantity * item.price * item.length}}</h3>
 </div>
