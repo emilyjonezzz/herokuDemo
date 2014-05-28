@@ -34,10 +34,10 @@ angular
         templateUrl: 'views/cart-list.html',
         controller: 'CartItemsCtrl'
       })
-      .when('/newcart', {
-        templateUrl: 'views/cart-create.html',
-        controller: 'CartItemsCtrl'
-      })
+      // .when('/newcart', {
+      //   templateUrl: 'views/cart-create.html',
+      //   controller: 'CartItemsCtrl'
+      // })
       .when('/cart/:id', {
         templateUrl: 'views/cart-detail.html',
         controller: 'CartItemCtrl'

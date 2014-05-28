@@ -11,8 +11,8 @@
 
 
 <section>
-	<h3>{{item.title}}</h3>
-	<p>{{item.quantity}}</p>
+	<h4>{{item.title}}: {{item.quantity}} ea</h4>
+    <p>{{item.quantity * item.price | currency}}<p>
 	<a href="#/cart/{{item._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
 </section>
 
