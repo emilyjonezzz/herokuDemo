@@ -104,7 +104,7 @@ angular.module('ngDay2App')
       $location.path('/cart');
     };
     $scope.editItem = function() {
-      CartItemSvc.edit($scope.item);
+      CartItemSvc.edit($scope.cartitem);
       $location.path('/cart');
     };
 
