@@ -3,6 +3,7 @@
     <li><a ng-href="#">Home</a></li>
     <li><a ng-href="#/product">Shop</a></li>
     <li><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/admin">Admin</a></li>
   </ul>
   <h2>Product Detail</h2>
 </div>
@@ -14,7 +15,7 @@
 <section>
 	<h3>{{product.title}}</h3>
 	<div>
-	    <carousel interval='3000'>
+	    <carousel>
 	      <slide class="active">
 	        <img ng-src="{{product.pic1}}" style="margin:auto;">
 	      </slide>
@@ -28,7 +29,7 @@
 	  </div>
 	<p>{{product.description}}</p>
 	<p>{{product.price | currency}}</p>
-	<a href="#/product/{{product._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
+	<a href="#/product/{{product._id}}/edit"><button class="btn btn-small btn-warning pull-right">Admin</button></a>
 </section>
 
 </div>

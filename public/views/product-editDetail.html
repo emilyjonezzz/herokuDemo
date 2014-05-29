@@ -1,8 +1,9 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li><a ng-href="#">Home</a></li>
-    <li class="active"><a ng-href="#/product">Shop</a></li>
+    <li><a ng-href="#/product">Shop</a></li>
     <li><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/admin">Admin</a></li>
   </ul>
   <h2>Update Products</h2>
 </div>
@@ -20,6 +21,7 @@
 <br>
 <input type="text" data-ng-model="product.price" value="{{product.price}}">
 <button data-ng-click="edit()">Update Product</button>
+<button ng-click="delete()">Delete</button>
 
 </div>
 

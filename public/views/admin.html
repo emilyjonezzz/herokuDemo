@@ -1,0 +1,24 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/product">Shop</a></li>
+    <li><a ng-href="#/blog">Blog</a></li>
+    <li class="active"><a ng-href="#/admin">Admin</a></li>
+  </ul>
+  <h2>Admin</h2>
+</div>
+
+<div ng-controller="ProductsCtrl">
+<h3 class="productAdmin">Products</h3>
+<button class="btn btn-sm btn-success" data-ng-click="createProduct()">Create New Product</button>
+</div>
+
+<div ng-controller="PostsCtrl">
+<h3 class="blogAdmin">Blog</h3>
+<button class="btn btn-sm btn-success" data-ng-click="createPost()">Create New Post</button>
+</div>
+
+
+<div class="footer">
+  <logo-directive></logo-directive>
+</div>

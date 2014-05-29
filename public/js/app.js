@@ -62,6 +62,9 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
+      .when('/admin', {
+        templateUrl: 'views/admin.html',
+      })
       .otherwise({
         redirectTo: '/'
       });

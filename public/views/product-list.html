@@ -3,13 +3,14 @@
     <li><a ng-href="#">Home</a></li>
     <li class="active"><a ng-href="#/product">Shop</a></li>
     <li><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/admin">Admin</a></li>
   </ul>
   <h2>Products</h2>
 </div>
 
 
 <div class="col-md-12">
-<button class="btn btn-sm btn-success pull-right createBtn" data-ng-click="createProduct()">Create New Product</button>
+
 <section class="productSection" data-ng-repeat="product in products">
   
   <my-directive></my-directive>
